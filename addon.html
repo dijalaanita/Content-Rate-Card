@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anita Dijala — Content Menu</title>
+<title>Anita Dijala — Add-ons & Extras</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -28,7 +28,32 @@
   .wrap{
     max-width:900px;
     margin:0 auto;
-    padding:64px 28px 40px;
+    padding:40px 28px 40px;
+  }
+
+  /* NAVIGATION PANEL */
+  .nav-panel{
+    display:flex;
+    gap:28px;
+    margin-bottom:48px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-link{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft);
+    transition:color 0.2s ease;
+  }
+  .nav-link:hover{
+    color:var(--ink);
+  }
+  .nav-link.active{
+    color:var(--clay);
+    font-weight:500;
   }
 
   /* HERO */
@@ -96,6 +121,7 @@
     color:var(--ink-soft);
     max-width:460px;
     margin-bottom:28px;
+    line-height:1.5;
   }
 
   /* CARDS */
@@ -225,6 +251,9 @@
   }
 
   @media (max-width:600px){
+    .nav-panel {
+      justify-content: center;
+    }
     .item{
       grid-template-columns:30px 1fr;
     }
@@ -247,34 +276,39 @@
 <body>
 <div class="wrap">
 
-  <div class="eyebrow">Content Menu — Prepared for Partners</div>
-  <h1>Anita Dijala<br><em>content, shot & served.</em></h1>
-  <p class="intro">Short-form video and photo content for cafes and hospitality brands — built to make people stop scrolling and start planning a visit. Pick a plate below, or ask for something custom.</p>
+  <!-- NAVIGATION PANEL -->
+  <nav class="nav-panel">
+    <a href="packages.html" class="nav-link">Packages Menu</a>
+    <a href="addons.html" class="nav-link active">Add-ons & Extras</a>
+  </nav>
+
+  <div class="eyebrow">A La Carte Options</div>
+  <h1>Extra Portions<br><em>to top it off.</em></h1>
+  <p class="intro">Need a little more on your plate? Whether it's extra content for a specific campaign, managing a second brand, or boosting your reach with paid ads, here are the add-ons available to augment your core package.</p>
   <div class="hero-rule"></div>
 
-  <!-- SECTION A -->
+  <!-- SECTION 1: ACCOUNT-LEVEL -->
   <div class="section">
     <div class="section-head">
-      <div class="section-title">Content Creation</div>
-      <div class="section-note">You post it</div>
+      <div class="section-title">Account-Level Add-ons</div>
+      <div class="section-note">Scaling up</div>
     </div>
-    <p class="section-desc">I shoot and edit the content, delivered ready to upload. Your team handles posting and captions.</p>
+    <p class="section-desc">For launching new platforms or handling entirely new brands/niches under your umbrella.</p>
 
     <div class="menu-list">
       <div class="item">
         <div class="item-no">01</div>
         <div class="item-body">
-          <div class="item-name">Starter</div>
-          <span class="item-tag">Content only</span>
+          <div class="item-name">Second Instagram Account</div>
+          <span class="item-tag mgmt">Full Management</span>
           <ul class="item-deliverables">
-            <li> 4 short-form videos (Reels/TikTok), filmed &amp; edited with trending audio and pacing.</li>
-            <li> 4 high-resolution image posts, shot &amp; edited (e.g., styled aesthetic shots, interior ambiance, or product close-ups).</li>
-            <li> All files are color-graded and delivered via a shared drive, ready for the client to download and post at their convenience.</li>
-            <li> (Note: This package strictly covers visual assets and does not include captions, Canva graphic designs, or Story posts.)</li>
+            <li> Perfect for a different niche or sub-brand.</li>
+            <li> Includes full content strategy, shoots, and management.</li>
+            <li> Note: This operates as a second Growth/Premium package (a second client's worth of work), not a discount tier.</li>
           </ul>
         </div>
         <div class="item-price">
-          <span class="price-amount">₦70,000</span>
+          <span class="price-amount">₦120k–150k</span>
           <span class="price-period">per month</span>
         </div>
       </div>
@@ -282,76 +316,124 @@
       <div class="item">
         <div class="item-no">02</div>
         <div class="item-body">
-          <div class="item-name">Growth</div>
-          <span class="item-tag">Content only</span>
+          <div class="item-name">New Platform Account Setup</div>
+          <span class="item-tag">One-Time Build</span>
           <ul class="item-deliverables">
-            <li> 6–8 short-form videos (Reels/TikTok), filmed &amp; edited with trending audio and pacing.</li>
-            <li> 6–8 high-resolution image posts, shot &amp; edited (e.g., styled aesthetic shots, interior ambiance, or product close-ups).</li>
-            <li> Tailored, engaging captions written for every single post, paired with a targeted hashtag strategy.</li>
-            <li> A complete content bank delivered ready-to-post, minimizing the creative heavy lifting for the client.</li>
-            <li> (Note: This package strictly covers visual assets and captions, and does not include Canva graphic designs or Story posts.)</li>
+            <li> Complete bio and aesthetic setup for a brand new platform.</li>
+            <li> Includes your first seed content batch to get the page off the ground.</li>
+            <li> <em>Note: Standard cross-posting of existing short-form content to TikTok is included in baseline packages at no separate charge.</em></li>
           </ul>
         </div>
         <div class="item-price">
-          <span class="price-amount">₦100,000</span>
-          <span class="price-period">per month</span>
+          <span class="price-amount">₦30k–50k</span>
+          <span class="price-period">one-time fee</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION B -->
+  <!-- SECTION 2: CONTENT-LEVEL -->
   <div class="section">
     <div class="section-head">
-      <div class="section-title">Social Media Management</div>
-      <div class="section-note">I post it</div>
+      <div class="section-title">Content-Level Add-ons</div>
+      <div class="section-note">More visuals</div>
     </div>
-    <p class="section-desc">Full-service — I create, plan, and post directly to your page, and keep an eye on comments and DMs.</p>
+    <p class="section-desc">Top up your monthly package with extra videos, photos, or dedicated shoot days when you have more going on.</p>
 
     <div class="menu-list">
       <div class="item">
         <div class="item-no">03</div>
         <div class="item-body">
-          <div class="item-name">Standard</div>
-          <span class="item-tag mgmt">3x weekly · ~12 posts</span>
+          <div class="item-name">Extra Video</div>
+          <span class="item-tag">A La Carte</span>
           <ul class="item-deliverables">
-            <li> Mix of 12 videos &amp; image posts, &amp; custom Canva-designed graphics (perfect for promotional flyers, customer reviews, or announcments) monthly</li>
-            <li> 2-3 Story updates per week (resharing feed posts, quick behind-the-scenes moments, or aesthetic mood shots).</li>
-            <li> Captions + hashtag strategy</li>
-            <li> Automated posting &amp; scheduling handled by me, for you</li>
-            <li> Comment &amp; DM replies during business hours</li>
+            <li> One extra short-form video (Reels/TikTok) beyond your standard package count, fully edited.</li>
           </ul>
         </div>
         <div class="item-price">
-          <span class="price-amount">₦150,000</span>
-          <span class="price-period">per month</span>
+          <span class="price-amount">₦20,000</span>
+          <span class="price-period">per video</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-no">04</div>
         <div class="item-body">
-          <div class="item-name">Premium</div>
-          <span class="item-tag mgmt">5x weekly · ~20 posts</span>
+          <div class="item-name">Extra Image Post</div>
+          <span class="item-tag">A La Carte</span>
           <ul class="item-deliverables">
-            <li> Mix of 20 videos &amp; image posts, &amp; custom Canva-designed graphics (perfect for promotional flyers, customer reviews, or announcments) monthly</li>
-            <li> 3-5 Story updates per week (resharing feed posts, quick behind-the-scenes moments, or aesthetic mood shots).</li>
-            <li> Captions + hashtag strategy</li>
-            <li> Monthly content calendar, planned in advance</li>
-            <li> Automated posting, scheduling &amp; community management</li>
-            <li> Monthly performance recap</li>
+            <li> One extra high-resolution image post beyond your package count, shot & edited.</li>
           </ul>
         </div>
         <div class="item-price">
-          <span class="price-amount">₦170,000</span>
+          <span class="price-amount">₦10,000</span>
+          <span class="price-period">per post</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-no">05</div>
+        <div class="item-body">
+          <div class="item-name">Extra Shoot Day</div>
+          <span class="item-tag">Production</span>
+          <ul class="item-deliverables">
+            <li> An additional on-site shoot day beyond the agreed monthly allocation.</li>
+            <li> Covers travel, time on-site, and post-production/editing for that specific batch of content.</li>
+          </ul>
+        </div>
+        <div class="item-price">
+          <span class="price-amount">₦70,000</span>
+          <span class="price-period">per day</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: STRATEGY/MANAGEMENT -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Strategy & Management</div>
+      <div class="section-note">Expanding reach</div>
+    </div>
+    <p class="section-desc">Advanced strategies to amplify your content through paid traffic and influencer networks.</p>
+
+    <div class="menu-list">
+      <div class="item">
+        <div class="item-no">06</div>
+        <div class="item-body">
+          <div class="item-name">Paid Ads Management</div>
+          <span class="item-tag mgmt">Ads Strategy</span>
+          <ul class="item-deliverables">
+            <li> Full Meta and TikTok ads strategy & execution to drive targeted reach.</li>
+            <li> <em>Note: This is the management fee. Ad spend itself is separate and paid directly by the client to the platform.</em></li>
+          </ul>
+        </div>
+        <div class="item-price">
+          <span class="price-amount">₦50k–100k</span>
           <span class="price-period">per month</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-no">07</div>
+        <div class="item-body">
+          <div class="item-name">Influencer / UGC Coordination</div>
+          <span class="item-tag mgmt">Outreach</span>
+          <ul class="item-deliverables">
+            <li> Sourcing relevant creators, briefing them on the campaign, and managing content collaborations from start to finish.</li>
+            <li> Pricing depends on the scope and size of the influencer campaign.</li>
+          </ul>
+        </div>
+        <div class="item-price">
+          <span class="price-amount">₦50,000+</span>
+          <span class="price-period">project-based</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <p class="footer-note">All packages include a discovery call before the first month to align on tone, aesthetic, and shoot dates. Custom scopes and one-off shoots available on request.</p>
+    <p class="footer-note">Custom scopes, bundles, and one-off project rates are available upon request. Add-ons are billed alongside your primary monthly invoice.</p>
     <div class="footer-contact">
       Anita Dijala<br>
       <a href="mailto:dijalaanita@gmail.com">dijalaanita@gmail.com</a><br>
