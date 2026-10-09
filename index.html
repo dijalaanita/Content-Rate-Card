@@ -31,7 +31,7 @@
     padding:64px 28px 40px;
   }
 
-   /* NAVIGATION PANEL */
+  /* NAVIGATION PANEL */
   .nav-panel{
     display:flex;
     gap:28px;
@@ -83,8 +83,27 @@
     font-size:16px;
     line-height:1.6;
     color:var(--ink-soft);
-    margin-bottom:8px;
+    margin-bottom:24px;
   }
+  
+  /* HERO META (Added for the new section) */
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .hero-meta strong {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 4px;
+  }
+
   .hero-rule{
     margin-top:40px;
     height:1px;
@@ -285,11 +304,10 @@
   <h1>Anita Dijala<br><em>content, shot &amp; served.</em></h1>
   <p class="intro">I make short-form video and photo content for cafés, studios, fashion, and lifestyle brands, built to look like it actually belongs to the brand, not like a trend with a logo pasted on. This page covers every package, every add-on, and exactly how the process runs, so there's nothing to guess at before we start.</p>
   <div class="hero-meta">
-      <div><strong>Based in</strong>Lagos, Nigeria</div>
-      <div><strong>Typical turnaround</strong>Weekly batches, per package</div>
-      <div><strong>Currently taking</strong>1–2 new clients / quarter</div>
-    </div>
-    <div class="hero-rule"></div>
+    <div><strong>Based in</strong>Lagos, Nigeria</div>
+    <div><strong>Typical turnaround</strong>Weekly batches, per package</div>
+    <div><strong>Currently taking</strong>1–2 new clients / quarter</div>
+  </div>
   <div class="hero-rule"></div>
 
   <!-- SECTION A -->
@@ -337,9 +355,8 @@
           <span class="price-period">per month</span>
         </div>
       </div>
-    </div>
 
-  <div class="item">
+      <div class="item">
         <div class="item-no">03</div>
         <div class="item-body">
           <div class="item-name">Dual-Entity Standard</div>
@@ -351,12 +368,13 @@
             <li>Complete visual separation and content strategy for each entity.</li>
           </ul>
         </div>
-        <div class="item-price"><span class="price-amount">from ₦280,000</span><span class="price-period">per month, scoped on call</span></div>
+        <div class="item-price">
+          <span class="price-amount">from ₦280,000</span>
+          <span class="price-period">per month, scoped on call</span>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="item">
+      
+      <div class="item">
         <div class="item-no">04</div>
         <div class="item-body">
           <div class="item-name">Dual-Entity Premium</div>
@@ -368,11 +386,13 @@
             <li>High-volume output to aggressively scale two sub-brands simultaneously.</li>
           </ul>
         </div>
-        <div class="item-price"><span class="price-amount">from ₦450,000</span><span class="price-period">per month, scoped on call</span></div>
+        <div class="item-price">
+          <span class="price-amount">from ₦450,000</span>
+          <span class="price-period">per month, scoped on call</span>
+        </div>
       </div>
     </div>
   </div>
-
 
   <!-- SECTION B -->
   <div class="section">
@@ -423,7 +443,6 @@
       </div>
     </div>
   </div>
-</div>
 
   <div class="footer">
     <p class="footer-note">All packages include a discovery call before the first month to align on tone, aesthetic, and shoot dates. Custom scopes and one-off shoots available on request.</p>
