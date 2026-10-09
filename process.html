@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anita Dijala — How It Runs &amp; FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FAF6EE;
+    --paper-shade: #F1EADA;
+    --ink: #241E1A;
+    --ink-soft: #5B5248;
+    --amber: #B9852B;
+    --clay: #A2432A;
+    --pine: #3A5A43;
+    --line: rgba(36,30,26,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:40px 28px 40px;
+  }
+
+  /* NAVIGATION PANEL */
+  .nav-panel{
+    display:flex;
+    gap:28px;
+    margin-bottom:48px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-link{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft);
+    transition:color 0.2s ease;
+  }
+  .nav-link:hover{ color:var(--ink); }
+  .nav-link.active{ color:var(--clay); font-weight:500; }
+
+  /* HERO */
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--clay);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(38px, 6vw, 62px);
+    line-height:1.02;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  h1 em{ font-style:italic; font-weight:300; color:var(--pine); }
+  .intro{
+    max-width:520px;
+    font-size:16px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
+  .hero-rule{
+    margin-top:40px;
+    height:1px;
+    background:repeating-linear-gradient(to right, var(--line) 0 8px, transparent 8px 14px);
+  }
+
+  /* SECTION LABEL */
+  .section{ margin-top:56px; }
+  .section-head{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:6px; }
+  .section-title{ font-family:'Fraunces', serif; font-weight:500; font-size:28px; letter-spacing:-0.01em; }
+  .section-note{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap; }
+  .section-desc{ font-size:14.5px; color:var(--ink-soft); max-width:460px; margin-bottom:28px; line-height:1.5; }
+
+  /* PROCESS */
+  .process-list{ counter-reset:step; }
+  .process-item{ display:grid; grid-template-columns:44px 1fr; gap:20px; padding:22px 0; border-top:1px solid var(--line); }
+  .process-item:last-child{ border-bottom:1px solid var(--line); }
+  .process-num{ counter-increment:step; font-family:'Fraunces', serif; font-size:22px; color:var(--amber); padding-top:2px; }
+  .process-num::before{ content: counter(step); }
+  .process-title{ font-family:'Fraunces', serif; font-weight:600; font-size:18px; margin-bottom:6px; }
+  .process-desc{ font-size:14px; color:var(--ink-soft); line-height:1.7; max-width:56ch; }
+
+  /* FAQ */
+  .faq-item{ padding:22px 0; border-top:1px solid var(--line); }
+  .faq-item:last-child{ border-bottom:1px solid var(--line); }
+  .faq-q{ font-family:'Fraunces', serif; font-weight:600; font-size:17px; margin-bottom:8px; }
+  .faq-a{ font-size:14px; color:var(--ink-soft); line-height:1.7; max-width:60ch; }
+
+  /* CASE NOTE */
+  .case-note{
+    margin-top:56px;
+    background:var(--paper-shade);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:28px 30px;
+  }
+  .case-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--pine);
+    margin-bottom:10px;
+  }
+  .case-text{ font-size:15px; line-height:1.7; color:var(--ink); max-width:62ch; }
+
+  /* FOOTER */
+  .footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .footer-note{ font-size:13.5px; color:var(--ink-soft); max-width:380px; line-height:1.6; }
+  .footer-contact{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; line-height:2; text-align:right; }
+  .footer-contact a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); }
+  .stamp{
+    margin-top:36px;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    opacity:0.7;
+  }
+
+  @media (max-width:600px){
+    .nav-panel{ flex-wrap:wrap; justify-content:center; }
+    .process-item{ grid-template-columns:30px 1fr; }
+    .footer{ flex-direction:column; }
+    .footer-contact{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- NAVIGATION PANEL -->
+  <nav class="nav-panel">
+    <a href="index.html" class="nav-link">Packages Menu</a>
+    <a href="addon.html" class="nav-link">Add-ons &amp; Extras</a>
+    <a href="process.html" class="nav-link active">How It Runs &amp; FAQ</a>
+  </nav>
+
+  <div class="eyebrow">Behind the Scenes</div>
+  <h1>How it runs,<br><em>start to finish.</em></h1>
+  <p class="intro">The same process every month once we're set up, so nothing depends on back-and-forth to keep moving. A few common questions below too.</p>
+  <div class="hero-rule"></div>
+
+  <!-- PROCESS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">How It Runs</div>
+      <div class="section-note">Monthly cycle</div>
+    </div>
+
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num"></div>
+        <div>
+          <div class="process-title">Calendar first</div>
+          <div class="process-desc">I send a content calendar for the month, every idea tied to a reference, before anything is filmed.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num"></div>
+        <div>
+          <div class="process-title">Shoot, batched</div>
+          <div class="process-desc">Raw footage captured over one or two planned shoot days, not spread across the whole month.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num"></div>
+        <div>
+          <div class="process-title">Edit &amp; grade</div>
+          <div class="process-desc">Colour grading, typography, pacing, and music all matched to your brand, not a generic trend preset.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num"></div>
+        <div>
+          <div class="process-title">Deliver in batches</div>
+          <div class="process-desc">Content lands on a set weekly cadence, with a short window for revision requests.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num"></div>
+        <div>
+          <div class="process-title">Recap &amp; adjust</div>
+          <div class="process-desc">A short monthly check-in on what performed, folded into the next month's calendar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Good Questions</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is payment upfront?</div>
+      <div class="faq-a">Yes, 100% upfront each month before that month's content work begins. This is non-negotiable across every package.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you handle paid ads or boosting?</div>
+      <div class="faq-a">Not inside a standard package, it's a listed add-on. Ad spend itself is always billed separately, direct to the platform.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if we want more than the package includes?</div>
+      <div class="faq-a">Extra content is billed per the add-on rates, confirmed with you before I start on it. No surprise invoices.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can we cancel anytime?</div>
+      <div class="faq-a">With 14 days' written notice before the next monthly cycle, per the service agreement. Content already in production for the current month isn't refunded.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you travel outside Lagos?</div>
+      <div class="faq-a">Case by case, travel costs beyond standard local transport are discussed and agreed before the shoot.</div>
+    </div>
+  </div>
+
+  <div class="case-note">
+    <div class="case-eyebrow">A note on how I work</div>
+    <div class="case-text">My current longest-running client is a wellness café + Pilates studio pair in Lekki, two entities, one retainer, each with its own visual identity (one warm and earthy, one cool and matte) so neither brand gets flattened into the other. That's the standard I bring to every account: content that could only belong to you, not a trend with your logo pasted on top.</div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-note">All packages include a discovery call before the first month to align on tone, aesthetic, and shoot dates. Custom scopes and one-off shoots available on request.</p>
+    <div class="footer-contact">
+      Anita Dijala<br>
+      <a href="mailto:dijalaanita@gmail.com">dijalaanita@gmail.com</a><br>
+      +234 814 753 2546
+    </div>
+  </div>
+
+  <div class="stamp">✦ served fresh, updated 2026 ✦</div>
+
+</div>
+</body>
+</html>
